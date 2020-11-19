@@ -46,11 +46,18 @@ namespace linq
                 {
                     15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
                 };
-            List<int> ascending = theNumbers.OrderBy(number => theNumbers).ToList();
+            List<int> ascending = theNumbers.OrderBy(number => number).ToList();
             Console.WriteLine("Ascending numbers");
             Console.WriteLine(ascending);
 
-
+            // Output how many numbers are in this list
+            List<int> numberCount = new List<int>()
+                {
+                    15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+                };
+            int count = numberCount.Count();
+            Console.WriteLine("How many numbers?");
+            Console.WriteLine(count);
         }
     }
 }
