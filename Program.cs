@@ -24,6 +24,7 @@ namespace linq
             };
 
             IEnumerable<int> fourSixMultiples = numbers.Where(number => number % 2 == 0);
+            Console.WriteLine("The multiples");
             Console.WriteLine(fourSixMultiples);
 
 
@@ -36,13 +37,19 @@ namespace linq
                 "Gregorio", "Jean-Paul", "Evangelina", "Viktor", "Jacqueline",
                 "Francisco", "Tre"
             };
-            List<string> descend = names.OrderByDescending(n => n);
+            List<string> descend = names.OrderByDescending(name => names).ToList();
+            Console.WriteLine("The names");
+            Console.WriteLine(descend);
 
             // Build a collection of these numbers sorted in ascending order
-            List<int> numbers = new List<int>()
+            List<int> theNumbers = new List<int>()
                 {
                     15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
                 };
+            List<int> ascending = theNumbers.OrderBy(number => theNumbers).ToList();
+            Console.WriteLine("Ascending numbers");
+            Console.WriteLine(ascending);
+
 
         }
     }
