@@ -58,6 +58,15 @@ namespace linq
             int count = numberCount.Count();
             Console.WriteLine("How many numbers?");
             Console.WriteLine(count);
+
+            // How much money have we made?
+            List<double> purchases = new List<double>()
+                {
+                    2340.29, 745.31, 21.76, 34.03, 4786.45, 879.45, 9442.85, 2454.63, 45.65
+                };
+            double totalAmount = purchases.Sum();
+            Console.WriteLine("Total money made");
+            Console.WriteLine(totalAmount);
         }
     }
 }
